@@ -9,6 +9,8 @@ Wanna see something cool ? Check `figures/habitat_types_map.jpeg`
                                 _/_Y                        m m
 ```
 
+LEONARDI Raphael (raphael.leonardi@universite-paris-saclay.fr), PRAS Baptiste (baptiste.pras@universite-paris-saclay.fr)
+
 # Reproducibility Instructions
 
 ## 1. Create the environment
@@ -63,6 +65,7 @@ requirements.txt
 data_preparation.ipynb
 multi_year_indicators.ipynb
 species_evolution.ipynb
+Technical_Report.pdf
 ```
 
 This ensures full reproducibility of the data cleaning, indicator computation, and modeling.
