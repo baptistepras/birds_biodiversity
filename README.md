@@ -38,12 +38,12 @@ Mandatory rules:
 You must run all cells of `data_preparation.ipynb` before running notebooks 2 or 3.
 When using a notebook, always execute the cells in order — do not skip any.
 
-4. Output files
+## 4. Output files
 
 All generated figures are saved inside the folder: `figures/`
 Cleaned datasets are exported as three CSV tables (one per sheet of the Excel file) inside: `data/processed/`
 
-5. Folder structure summary
+## 5. Folder structure summary
 
 ```
 data/
