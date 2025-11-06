@@ -10,6 +10,7 @@ Wanna see something cool ? Check `figures/habitat_types_map.jpeg`
 ```
 
 LEONARDI Raphael (raphael.leonardi@universite-paris-saclay.fr) ; 22208912
+
 PRAS Baptiste (baptiste.pras@universite-paris-saclay.fr) ; 22201371
 
 # Reproducibility Instructions
