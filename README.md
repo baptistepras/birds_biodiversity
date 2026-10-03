@@ -1,7 +1,7 @@
-Wanna see something cool ? Check `figures/habitat_types_map.jpeg`
+# Birds Biodiversity
 
 ```
-   \\                       /""\      ,                       __                         ,_,  
+   \\                       /""\      ,                       __                         ,_,
    (o>                     <>^  L____/|                      /'{>                       (O,O)
 \\_//)                       `) /`   , /                ____) (____                     (   )
  \_/_)                        \ `---' /               //'--;   ;--'\\                   -"-"---
@@ -9,65 +9,28 @@ Wanna see something cool ? Check `figures/habitat_types_map.jpeg`
                                 _/_Y                        m m
 ```
 
-LEONARDI Raphael (raphael.leonardi@universite-paris-saclay.fr)
+An analysis of bird observations collected from 2012 to 2025 across several habitats. The notebooks clean the raw observation sheets, compute multi-year biodiversity indicators per habitat (richness, Shannon index, normalized abundance, origin of species) and model the evolution of species over time.
 
-PRAS Baptiste (baptiste.pras@universite-paris-saclay.fr)
+<p align="center">
+  <img src="figures/habitat_types_map.jpeg" alt="Map of the habitat types" width="70%">
+</p>
 
-# Reproducibility Instructions
+The full analysis is in `Technical_Report.pdf`, and `dataset_overview.md` describes the data.
 
-## 1. Create the environment
+## Usage
 
-To reproduce the analysis, create a Python environment and install all required libraries using the `requirements.txt` file.
-
-`pip install -r requirements.txt`
-
-All dependencies (NumPy, pandas, matplotlib, seaborn, scikit-learn, pygam, statsmodels, GeoPandas, etc.) will be installed automatically.
-
-## 2. Input data
-
-Always use our dataset: `Observations 2012-2025.xlsx`
-
-Do not use another version of the dataset (we modified some mistakes in it).
-
-The preprocessing pipeline was designed exclusively for our cleaned version of the dataset and expects its structure.
-
-## 3. Notebooks execution order (important)
-
-There are three Jupyter notebooks, and they must be executed in this exact order:
-
-1) `data_preparation.ipynb` (Cleans the raw Excel sheet and generates processed tables. Vizualize some data.)
-2) `multi_years_indicators.ipynb` (Computes multi-year indicators.)
-3) `species_evolution.ipynb` (Compute species-level trends.)
-
-Mandatory rules:
-
-You must run all cells of `data_preparation.ipynb` before running notebooks 2 or 3.
-
-When using a notebook, always execute the cells in order — do not skip any.
-
-## 4. Output files
-
-All generated figures are saved inside the folder: `figures/`
-
-Cleaned datasets are exported as three CSV tables (one per sheet of the Excel file) inside: `data/processed/`
-
-## 5. Folder structure summary
-
-```
-data/
-|  processed/
-|     observations.csv
-|     sites.csv
-|     species.csv
-|  raw/
-|     Observations 2012-2025.xlsx
-figures/
-|  ...
-requirements.txt
-data_preparation.ipynb
-multi_year_indicators.ipynb
-species_evolution.ipynb
-Technical_Report.pdf
+```bash
+pip install -r requirements.txt
 ```
 
-This ensures full reproducibility of the data cleaning, indicator computation, and modeling.
+Run the three notebooks in this order, executing every cell:
+
+1. `data_preparation.ipynb`: cleans the Excel file and exports the tables to `data/processed/`;
+2. `multi_year_indicators.ipynb`: computes the multi-year indicators;
+3. `species_evolution.ipynb`: computes the trends of each species.
+
+Always use the provided `data/raw/Observations 2012-2025.xlsx`: some errors of the original file were corrected in it, and the preprocessing expects its exact structure. All figures are saved in `figures/`.
+
+## Authors
+
+Raphael Leonardi and Baptiste Pras.
